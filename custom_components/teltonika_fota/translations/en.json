@@ -1,0 +1,170 @@
+{
+  "title": "Teltonika FOTA",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Teltonika FOTA",
+        "description": "Enter your API token from [FOTA WEB](https://fota.teltonika.lt). You can create an API integration token in Settings > API Tokens.",
+        "data": {
+          "api_token": "API Token"
+        },
+        "data_description": {
+          "api_token": "Your Teltonika FOTA API integration token"
+        }
+      },
+      "account": {
+        "title": "Account Information",
+        "description": "Found **{device_count}** devices (**{online_count}** online). Click Submit to add this integration."
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate",
+        "description": "Your API token has expired or is invalid. Please enter a new token.",
+        "data": {
+          "api_token": "API Token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API token. Please check your token and try again.",
+      "cannot_connect": "Cannot connect to Teltonika FOTA API. Please check your network connection.",
+      "unknown": "An unexpected error occurred. Please try again."
+    },
+    "abort": {
+      "already_configured": "This Teltonika FOTA account is already configured.",
+      "reauth_successful": "Reauthentication successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Teltonika FOTA Options",
+        "description": "Configure the integration settings.",
+        "data": {
+          "scan_interval": "Update interval",
+          "enabled_sensors": "Enabled sensors",
+          "monitored_devices": "Devices to monitor"
+        },
+        "data_description": {
+          "scan_interval": "How often to fetch data from the API (in minutes)",
+          "enabled_sensors": "Select which sensors to create for each device",
+          "monitored_devices": "Select which devices to create entities for"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "activity_status": {
+        "name": "Activity Status"
+      },
+      "firmware_version": {
+        "name": "Firmware Version"
+      },
+      "task_queue_count": {
+        "name": "Task Queue"
+      },
+      "model": {
+        "name": "Model"
+      },
+      "last_connection": {
+        "name": "Last Connection"
+      },
+      "has_pending_tasks": {
+        "name": "Has Pending Tasks"
+      },
+      "total_devices": {
+        "name": "Total Devices"
+      },
+      "online_devices": {
+        "name": "Online Devices"
+      },
+      "offline_devices": {
+        "name": "Offline Devices"
+      },
+      "pending_tasks": {
+        "name": "Pending Tasks"
+      },
+      "failed_tasks": {
+        "name": "Failed Tasks"
+      },
+      "group_count": {
+        "name": "Groups"
+      },
+      "task_count": {
+        "name": "Total Tasks"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "Online"
+      },
+      "firmware_update_pending": {
+        "name": "Firmware Update Pending"
+      }
+    }
+  },
+  "services": {
+    "refresh_devices": {
+      "name": "Refresh Devices",
+      "description": "Force refresh all device data from Teltonika FOTA API."
+    },
+    "create_firmware_task": {
+      "name": "Create Firmware Task",
+      "description": "Schedule a firmware update for a specific device.",
+      "fields": {
+        "imei": {
+          "name": "IMEI",
+          "description": "The IMEI number of the target device."
+        },
+        "firmware_id": {
+          "name": "Firmware ID",
+          "description": "The ID of the firmware to deploy."
+        }
+      }
+    },
+    "create_config_task": {
+      "name": "Create Configuration Task",
+      "description": "Schedule a configuration update for a specific device.",
+      "fields": {
+        "imei": {
+          "name": "IMEI",
+          "description": "The IMEI number of the target device."
+        },
+        "config_id": {
+          "name": "Configuration ID",
+          "description": "The ID of the configuration to deploy."
+        }
+      }
+    },
+    "cancel_task": {
+      "name": "Cancel Task",
+      "description": "Cancel a specific task by ID.",
+      "fields": {
+        "task_id": {
+          "name": "Task ID",
+          "description": "The ID of the task to cancel."
+        }
+      }
+    },
+    "bulk_cancel_tasks": {
+      "name": "Bulk Cancel Tasks",
+      "description": "Cancel multiple tasks at once.",
+      "fields": {
+        "task_ids": {
+          "name": "Task IDs",
+          "description": "List of task IDs to cancel."
+        }
+      }
+    },
+    "retry_failed_tasks": {
+      "name": "Retry Failed Tasks",
+      "description": "Retry all failed tasks in a specific batch.",
+      "fields": {
+        "batch_id": {
+          "name": "Batch ID",
+          "description": "The ID of the batch containing failed tasks."
+        }
+      }
+    }
+  }
+}

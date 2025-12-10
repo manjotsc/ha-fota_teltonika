@@ -1,0 +1,87 @@
+# Services for Teltonika FOTA integration
+
+refresh_devices:
+  name: Refresh Devices
+  description: Force refresh all device data from Teltonika FOTA API.
+
+create_firmware_task:
+  name: Create Firmware Task
+  description: Schedule a firmware update for a specific device.
+  fields:
+    imei:
+      name: IMEI
+      description: The IMEI number of the target device.
+      required: true
+      example: "123456789012345"
+      selector:
+        text:
+    firmware_id:
+      name: Firmware ID
+      description: The ID of the firmware to deploy (from FOTA WEB).
+      required: true
+      example: 123
+      selector:
+        number:
+          min: 1
+          mode: box
+
+create_config_task:
+  name: Create Configuration Task
+  description: Schedule a configuration update for a specific device.
+  fields:
+    imei:
+      name: IMEI
+      description: The IMEI number of the target device.
+      required: true
+      example: "123456789012345"
+      selector:
+        text:
+    config_id:
+      name: Configuration ID
+      description: The ID of the configuration to deploy (from FOTA WEB).
+      required: true
+      example: 456
+      selector:
+        number:
+          min: 1
+          mode: box
+
+cancel_task:
+  name: Cancel Task
+  description: Cancel a specific task by ID.
+  fields:
+    task_id:
+      name: Task ID
+      description: The ID of the task to cancel.
+      required: true
+      example: 789
+      selector:
+        number:
+          min: 1
+          mode: box
+
+bulk_cancel_tasks:
+  name: Bulk Cancel Tasks
+  description: Cancel multiple tasks at once.
+  fields:
+    task_ids:
+      name: Task IDs
+      description: List of task IDs to cancel.
+      required: true
+      example: "[1, 2, 3]"
+      selector:
+        object:
+
+retry_failed_tasks:
+  name: Retry Failed Tasks
+  description: Retry all failed tasks in a specific batch.
+  fields:
+    batch_id:
+      name: Batch ID
+      description: The ID of the batch containing failed tasks.
+      required: true
+      example: 101
+      selector:
+        number:
+          min: 1
+          mode: box

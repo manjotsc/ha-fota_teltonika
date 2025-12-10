@@ -1,0 +1,13 @@
+{
+  "domain": "teltonika_fota",
+  "name": "Teltonika FOTA",
+  "codeowners": ["@manjotsc"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/manjotsc/ha-fota-teltonika",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/manjotsc/ha-fota-teltonika/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
