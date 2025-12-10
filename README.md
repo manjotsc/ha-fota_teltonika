@@ -15,7 +15,11 @@ Monitor and manage your Teltonika GPS/telematics devices through [FOTA WEB](http
 
 **Binary Sensors:** Online status, firmware update pending
 
-**Services:** Refresh devices, cancel tasks
+**Buttons:**
+- Refresh Data - Force refresh all data from API
+- Cancel Pending Tasks - Cancel all pending tasks for a device
+
+**Services:** `refresh_devices`, `cancel_task`
 
 ## Installation
 
@@ -38,7 +42,6 @@ Copy `custom_components/teltonika_fota` to your `config/custom_components/` dire
 
 - **Update interval:** 1-60 minutes
 - **Enabled sensors:** Choose which sensors to create
-- **Monitored devices:** Select specific devices
 
 ## Links
 
