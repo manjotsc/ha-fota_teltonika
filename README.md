@@ -15,7 +15,7 @@ Monitor and manage your Teltonika GPS/telematics devices through [FOTA WEB](http
 
 **Binary Sensors:** Online status, firmware update pending
 
-**Services:** Refresh devices, create firmware/config tasks, cancel tasks, retry failed tasks
+**Services:** Refresh devices, cancel tasks
 
 ## Installation
 

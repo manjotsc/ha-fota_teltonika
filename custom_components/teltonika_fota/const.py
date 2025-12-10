@@ -72,4 +72,4 @@ SERVICE_BULK_CANCEL_TASKS: Final = "bulk_cancel_tasks"
 SERVICE_RETRY_FAILED_TASKS: Final = "retry_failed_tasks"
 
 # Platforms
-PLATFORMS: Final[list[Platform]] = [Platform.SENSOR, Platform.BINARY_SENSOR]
+PLATFORMS: Final[list[Platform]] = [Platform.SENSOR, Platform.BINARY_SENSOR, Platform.BUTTON]

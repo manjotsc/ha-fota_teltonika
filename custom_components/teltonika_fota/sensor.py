@@ -315,10 +315,27 @@ class TeltonikaFotaDeviceSensor(
     def extra_state_attributes(self) -> dict[str, Any]:
         """Return extra state attributes."""
         device = self.coordinator.data.devices.get(self._imei, {})
-        return {
+        attrs = {
             "imei": self._imei,
             "serial_number": device.get("serial"),
         }
+
+        # Add task details for task_queue_count sensor
+        if self.entity_description.key == "task_queue_count":
+            task_queue = device.get("task_queue")
+            if task_queue and task_queue != "Empty" and isinstance(task_queue, list):
+                tasks = []
+                for task in task_queue:
+                    task_info = {
+                        "id": task.get("id"),
+                        "type": task.get("type"),
+                        "status": task.get("status"),
+                    }
+                    tasks.append(task_info)
+                attrs["tasks"] = tasks
+                attrs["task_ids"] = [t.get("id") for t in task_queue if t.get("id")]
+
+        return attrs
 
 
 class TeltonikaFotaAccountSensor(
@@ -359,3 +376,27 @@ class TeltonikaFotaAccountSensor(
     def native_value(self) -> Any:
         """Return the sensor value."""
         return self.entity_description.value_fn(self.coordinator.data)
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        """Return extra state attributes."""
+        attrs: dict[str, Any] = {}
+
+        # Add task details for pending_tasks and failed_tasks sensors
+        if self.entity_description.key in ("pending_tasks", "failed_tasks"):
+            target_status = "pending" if self.entity_description.key == "pending_tasks" else "failed"
+            tasks = []
+            for task in self.coordinator.data.tasks:
+                if task.get("status") == target_status:
+                    task_info = {
+                        "id": task.get("id"),
+                        "type": task.get("type"),
+                        "device_imei": task.get("imei"),
+                        "status": task.get("status"),
+                    }
+                    tasks.append(task_info)
+            if tasks:
+                attrs["tasks"] = tasks
+                attrs["task_ids"] = [t["id"] for t in tasks if t.get("id")]
+
+        return attrs
