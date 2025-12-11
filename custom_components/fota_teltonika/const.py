@@ -5,7 +5,7 @@ from typing import Final
 from homeassistant.const import Platform
 
 # Domain
-DOMAIN: Final = "teltonika_fota"
+DOMAIN: Final = "fota_teltonika"
 
 # API Configuration
 BASE_URL: Final = "https://api.teltonika.lt"

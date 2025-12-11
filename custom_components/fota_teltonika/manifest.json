@@ -1,5 +1,5 @@
 {
-  "domain": "teltonika_fota",
+  "domain": "fota_teltonika",
   "name": "Teltonika FOTA",
   "codeowners": ["@manjotsc"],
   "config_flow": true,

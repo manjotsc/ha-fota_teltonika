@@ -30,7 +30,7 @@ Monitor and manage your Teltonika GPS/telematics devices through [FOTA WEB](http
 4. Restart Home Assistant
 
 ### Manual
-Copy `custom_components/teltonika_fota` to your `config/custom_components/` directory.
+Copy `custom_components/fota_teltonika` to your `config/custom_components/` directory.
 
 ## Setup
 
