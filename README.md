@@ -1,4 +1,4 @@
-# Teltonika FOTA for Home Assistant
+# Fota Teltonika for Home Assistant
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -26,7 +26,7 @@ Monitor and manage your Teltonika GPS/telematics devices through [FOTA WEB](http
 ### HACS (Recommended)
 1. Open HACS → Integrations → ⋮ → Custom repositories
 2. Add `https://github.com/manjotsc/ha-fota-teltonika` as Integration
-3. Search "Teltonika FOTA" and install
+3. Search "Fota Teltonika" and install
 4. Restart Home Assistant
 
 ### Manual
@@ -35,7 +35,7 @@ Copy `custom_components/fota_teltonika` to your `config/custom_components/` dire
 ## Setup
 
 1. Get your API token from [FOTA WEB](https://fota.teltonika.lt) → Settings → API Tokens → Add "API integration token"
-2. In Home Assistant: Settings → Devices & Services → Add Integration → "Teltonika FOTA"
+2. In Home Assistant: Settings → Devices & Services → Add Integration → "Fota Teltonika"
 3. Enter your API token
 
 ## Options

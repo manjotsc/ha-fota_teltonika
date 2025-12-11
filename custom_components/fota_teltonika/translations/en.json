@@ -1,5 +1,5 @@
 {
-  "title": "Teltonika FOTA",
+  "title": "Fota Teltonika",
   "config": {
     "step": {
       "user": {
@@ -37,7 +37,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "Teltonika FOTA Options",
+        "title": "Fota Teltonika Options",
         "description": "Configure the integration settings.",
         "data": {
           "scan_interval": "Update interval",
