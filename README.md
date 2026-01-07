@@ -25,7 +25,7 @@ Monitor and manage your Teltonika GPS/telematics devices through [FOTA WEB](http
 
 ### HACS (Recommended)
 1. Open HACS → Integrations → ⋮ → Custom repositories
-2. Add `https://github.com/manjotsc/ha-fota-teltonika` as Integration
+2. Add `https://github.com/manjotsc/ha-fota_teltonika` as Integration
 3. Search "Fota Teltonika" and install
 4. Restart Home Assistant
 
