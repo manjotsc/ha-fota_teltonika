@@ -72,13 +72,6 @@ This integration connects your Home Assistant instance to the Teltonika FOTA WEB
 ## Installation
 
 ### HACS (Recommended)
-<<<<<<< HEAD
-=======
-1. Open HACS → Integrations → ⋮ → Custom repositories
-2. Add `https://github.com/manjotsc/ha-fota_teltonika` as Integration
-3. Search "Fota Teltonika" and install
-4. Restart Home Assistant
->>>>>>> 33ee2658ed0b82ad56f8bd543c3fabc3ff792aa7
 
 1. Open **HACS** in Home Assistant
 2. Go to **Integrations** → click the **⋮** menu → **Custom repositories**
