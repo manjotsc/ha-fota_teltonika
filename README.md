@@ -10,13 +10,13 @@
 
 <p align="center">
   <a href="https://github.com/hacs/integration"><img src="https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge" alt="HACS Custom"></a>
-  <a href="https://github.com/manjotsc/ha-fota-teltonika/releases"><img src="https://img.shields.io/github/v/release/manjotsc/ha-fota-teltonika?style=for-the-badge" alt="Release"></a>
+  <a href="https://github.com/manjotsc/ha-fota_teltonika/releases"><img src="https://img.shields.io/github/v/release/manjotsc/ha-fota-teltonika?style=for-the-badge" alt="Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/manjotsc/ha-fota-teltonika?style=for-the-badge" alt="License"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/manjotsc/ha-fota-teltonika/stargazers"><img src="https://img.shields.io/github/stars/manjotsc/ha-fota-teltonika?style=for-the-badge" alt="Stars"></a>
-  <a href="https://github.com/manjotsc/ha-fota-teltonika/issues"><img src="https://img.shields.io/github/issues/manjotsc/ha-fota-teltonika?style=for-the-badge" alt="Issues"></a>
+  <a href="https://github.com/manjotsc/ha-fota_teltonika/stargazers"><img src="https://img.shields.io/github/stars/manjotsc/ha-fota-teltonika?style=for-the-badge" alt="Stars"></a>
+  <a href="https://github.com/manjotsc/ha-fota_teltonika/issues"><img src="https://img.shields.io/github/issues/manjotsc/ha-fota-teltonika?style=for-the-badge" alt="Issues"></a>
 </p>
 
 ---
@@ -77,7 +77,7 @@ This integration connects your Home Assistant instance to the Teltonika FOTA WEB
 2. Go to **Integrations** → click the **⋮** menu → **Custom repositories**
 3. Add the repository URL:
    ```
-   https://github.com/manjotsc/ha-fota-teltonika
+   https://github.com/manjotsc/ha-fota_teltonika
    ```
 4. Select **Integration** as the category
 5. Click **Add**
@@ -86,7 +86,7 @@ This integration connects your Home Assistant instance to the Teltonika FOTA WEB
 
 ### Manual Installation
 
-1. Download the latest release from [GitHub Releases](https://github.com/manjotsc/ha-fota-teltonika/releases)
+1. Download the latest release from [GitHub Releases](https://github.com/manjotsc/ha-fota_teltonika/releases)
 2. Extract and copy the `fota_teltonika` folder to:
    ```
    <config>/custom_components/fota_teltonika
@@ -136,7 +136,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Resources
 
-- [Report Issues](https://github.com/manjotsc/ha-fota-teltonika/issues)
+- [Report Issues](https://github.com/manjotsc/ha-fota_teltonika/issues)
 - [FOTA WEB Documentation](https://wiki.teltonika-gps.com/view/FOTA_WEB)
 - [Teltonika GPS Wiki](https://wiki.teltonika-gps.com/)
 
