@@ -6,6 +6,7 @@ from datetime import timedelta
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .api import TeltonikaFotaApi
@@ -19,15 +20,11 @@ from .const import (
 from .coordinator import TeltonikaFotaCoordinator
 from .services import async_setup_services, async_unload_services
 
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
+
 _LOGGER = logging.getLogger(__name__)
 
 type TeltonikaFotaConfigEntry = ConfigEntry[TeltonikaFotaCoordinator]
-
-
-async def async_setup(hass: HomeAssistant, config: dict) -> bool:
-    """Set up Teltonika FOTA from configuration.yaml."""
-    hass.data.setdefault(DOMAIN, {})
-    return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: TeltonikaFotaConfigEntry) -> bool:
